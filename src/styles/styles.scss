@@ -1,0 +1,40 @@
+$accent: #008385;
+$accent-dark: #003839;
+$white: #fff;
+$spacer-x: 1rem;
+$spacer-y: .75rem;
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.logo {
+  margin-bottom: 1rem;
+}
+
+.main-nav {
+  background-color: $accent;
+  ul {
+    // Reset ul defaults
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 576px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    li a {
+      display: block;
+      text-decoration: none;
+      color: $white;
+      padding: $spacer-y $spacer-x;
+      &:hover, &:focus {
+        outline: none;
+        background-color: $accent-dark;
+      }
+    }
+  }
+}
