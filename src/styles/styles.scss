@@ -4,6 +4,8 @@ $white: #fff;
 $spacer-x: 1rem;
 $spacer-y: .75rem;
 
+$mobile-breakpoint: 576px;
+
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -20,9 +22,11 @@ body {
     padding: 0;
     list-style: none;
 
+    // Mobile first
     display: flex;
     flex-direction: column;
-    @media screen and (min-width: 576px) {
+    // Desktop
+    @media screen and (min-width: $mobile-breakpoint) {
       flex-direction: row;
       justify-content: space-between;
     }
